@@ -19,7 +19,7 @@ chrome.action.onClicked.addListener(async (tab) => {
       tabId: tab.id,
       text: nextState,
     });
-    
+
     if (nextState === "ON") {
         // Insert the CSS file when the user turns the extension on
         await chrome.scripting.insertCSS({
@@ -34,4 +34,5 @@ chrome.action.onClicked.addListener(async (tab) => {
         });
       }
     }
+    
   });
